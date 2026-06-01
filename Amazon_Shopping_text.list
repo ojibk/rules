@@ -1,7 +1,12 @@
 # NAME: Amazon_Global_Shopping
-# DESCRIPTION: 全球零售站点 + 静态图片资产 + 广告与前端组件库 + 卖家及物流体系规则集（不含 AWS 基础云）
+# 名称: 亚马全球逊购物
+# DESCRIPTION: Amazon Shopping, Media, Ads & Seller Network Rule-Set (Excl. AWS)
+# 描述: 全球零售站点 + 图片资源 + 广告与前端组件库 + 卖家及物流体系规则集（不含 AWS 基础云）
 # TOTAL_ITEMS: 77
-# format: text
+# format: tyaml / text / mrs
+# 若需本地转成 mrs 格式，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
+# cd "D:\Program Files\Clash Verge"
+# .\verge-mihomo convert-ruleset domain text amazon.txt amazon.mrs
 # ══════════════════════════════════════════════════════════════════════
 # 1. 北美与拉美市场 (North & Latin America)
 # ══════════════════════════════════════════════════════════════════════
@@ -95,7 +100,7 @@
 .aboutamazon.cn
 
 # ══════════════════════════════════════════════════════════════════════
-# 6. 全球统一：高清商品图片、Listing 详情、视频与前端资产（流量大户）
+# 6. 全球统一：高清商品图片、Listing 详情、视频与前端资源（流量大户）
 # ══════════════════════════════════════════════════════════════════════
 # 基础静态资源、广告位、类目横幅图
 .images-amazon.com
@@ -103,7 +108,7 @@
 .ssl-images-amazon.com
 # 主图视频、买家评论视频、3D渲染动态图
 .media-amazon.com
-# 官方静态资产及图片存储补充
+# 官方静态资源及图片存储补充
 .amazonimages.com
 # 网页基础样式表（CSS）、交互脚本（JS）、全站排版框架
 .a2z.com
@@ -123,7 +128,7 @@
 # ══════════════════════════════════════════════════════════════════════
 # 7. 垂直购物站点补充
 # ══════════════════════════════════════════════════════════════════════
-# 亚马逊旗下女性时尚购物站（统一前端资产）
+# 亚马逊旗下女性时尚购物站（统一前端资源）
 .shopbop.com
 # 亚马逊旗下男性时尚购物站
 .eastdane.com
@@ -133,7 +138,7 @@
 .zappos.com
 # Zappos 静态缓存与边缘分发网络
 .zappos.io
-# 亚马逊日本垂直鞋包资产遗留域名
+# 亚马逊日本垂直鞋包资源遗留域名
 .javari.jp
 # 亚马逊旗下有声书全域
 .audible.com
@@ -165,7 +170,7 @@
 .amazonbusiness.cn
 # 亚马逊企业购中国区变体
 .amazonbusiness.com.cn
-# 服装配饰特定类目后台资产与组件库
+# 服装配饰特定类目后台资源与组件库
 .amazon-fashions.com
 # 亚马逊发明家 Launchpad 品牌计划主站
 .amazonlaunchpad.com
