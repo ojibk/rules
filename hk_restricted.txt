@@ -1,0 +1,52 @@
+# NAME: hk_restricted
+# 名称：香港受限服务
+# DESCRIPTION: Hong Kong Restricted Services Rule-Set (OpenAI, Claude, Gemini, TikTok)
+# 描述：香港锁区受限的网络服务全生态规则集（含 OpenAI、Claude、Gemini 精准子域、TikTok 全球资源）
+# TOTAL_ITEMS: 28
+# format: text
+# 若需本地转成 mrs 格式，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
+# cd "D:\Program Files\Clash Verge"
+# .\verge-mihomo convert-ruleset domain text hk_restricted.txt hk_restricted.mrs
+# ══════════════════════════════════════════════════════════════════════
+# 1. OpenAI / ChatGPT 生态核心与安全验证网关
+# ══════════════════════════════════════════════════════════════════════
++.openai.com
++.chatgpt.com
++.oaistatic.com
++.oaiusercontent.com
++.ai.com
++.arkoselabs.com
++.openaicom.imgix.net
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. Anthropic / Claude AI 核心及静态资源
+# ══════════════════════════════════════════════════════════════════════
++.anthropic.com
++.claude.ai
++.claudeusercontent.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. Google Gemini 与生成式 AI 边缘端（精准剥离，不影响全域 Google 直连或普通代理）
+# ══════════════════════════════════════════════════════════════════════
++.gemini.google
++.gemini.google.com
++.generativelanguage.googleapis.com
++.proactivebackend-pa.googleapis.com
++.alkaliminer-pa.googleapis.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. TikTok 国际版全域核心业务、全球 CDN 与图片/视频资源体系
+# ══════════════════════════════════════════════════════════════════════
++.tiktok.com
++.tiktokcdn.com
++.tiktokv.com
++.byteoversea.com
++.byteoversea.net
++.ibytedtos.com
++.ibyteimg.com
++.muscdn.com
++.musical.ly
++.tiktokw.com
++.tik-tokapi.com
++.ttwstatic.com
++.ttplugins.com
