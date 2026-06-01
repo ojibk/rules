@@ -1,8 +1,10 @@
 # NAME: amazon
-# DESCRIPTION: 全球零售站点 + 静态图片资产 + 广告与前端组件库 + 卖家及物流体系规则集（不含 AWS 基础云）
+# 名称: 亚马逊购物
+# DESCRIPTION: Amazon Shopping, Media, Ads & Seller Network Rule-Set (Excl. AWS)
+# 描述: 全球零售站点 + 图片资源 + 广告与前端组件库 + 卖家及物流体系规则集（不含 AWS 基础云）
 # TOTAL_ITEMS: 77
-# format: text
-# 若需本地生成，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
+# format: text / mrs
+# 若需本地转成 mrs 格式，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
 # cd "D:\Program Files\Clash Verge"
 # .\verge-mihomo convert-ruleset domain text amazon.txt amazon.mrs
 # ══════════════════════════════════════════════════════════════════════
