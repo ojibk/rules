@@ -6,7 +6,8 @@
 # format: text / mrs
 # 若需本地转成 mrs 格式，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
 # cd "D:\Program Files\Clash Verge"
-# .\verge-mihomo convert-ruleset domain text amazon.txt amazon.mrs
+# Windows: .\verge-mihomo convert-ruleset domain text hk_restricted.txt hk_restricted.mrs
+# Linux/macOS: ./verge-mihomo convert-ruleset domain text hk_restricted.txt hk_restricted.mrs
 # ══════════════════════════════════════════════════════════════════════
 # 1. 北美与拉美市场 (North & Latin America)
 # ══════════════════════════════════════════════════════════════════════
