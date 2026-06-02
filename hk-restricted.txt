@@ -1,5 +1,5 @@
 # NAME: hk-restricted
-# 名称：香港受限服务规则集
+# 名称：香港受限网络服务规则集
 # DESCRIPTION: Hong Kong Restricted Services Rule-Set (OpenAI, Claude, Gemini, TikTok)
 # 描述：专属港区网络服务受限场景：对香港 IP 敏感的 AI、流媒体等（如 chatGPT、Claude、Gemini、TikTok）
 # TOTAL_ITEMS: 28
