@@ -1,0 +1,26 @@
+# ==========================================
+# 1. Claude / Anthropic 核心服务与官方网域
+# ==========================================
++.anthropic
++.claude
++.anthropic.com
++.claude.ai
++.claude.com
++.claude.run
+
+# ==========================================
+# 2. Claude 平台功能、开发文档与 CDN 静态资源
+# ==========================================
++.claudeusercontent.com
++.platform.claude.com
++.code.claude.com
++.docs.claude.com
++.servd-anthropic-website.b-cdn.net
+
+# ==========================================
+# 3. Intercom 客户支持与数据统计（第三方集成服务）
+# ==========================================
++.intercom
++.intercom.io
++.intercomcdn.com
++.statsig.com
