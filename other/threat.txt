@@ -1,0 +1,50 @@
+# https://raw.githubusercontent.com/julxxy/smart-proxy-rules/main/reject/reject-threat.conf
+
+# 国际欺诈/威胁
++.staticfile.org
++.stream1.freetv.fun
++.formdesigner.pro
++.alwingulla.com
++.cfss.cc
++.staticfile.net
++.chajianxw.com
++.explodasclksec.com
+
+# 国内隐私收集/广告
+mobile.events.data.microsoft.com
+sdk.e.qq.com
+mi.gdt.qq.com
+ios.bugly.qq.com
++.gdtimg.com
++.ugdtimg.com
++.pangolin-sdk-toutiao.com
++.pangolin-sdk-toutiao-b.com
++.pangolin-sdk-toutiao1.com
++.pglstatp-toutiao.com
+toblog.ctobsnssdk.com
+tnc3-alisc1.zijieapi.com
+apmplus.volces.com
+mon.zijieapi.com
+lf3-analytics.bytescm.com
+lf3-short.ibytedapm.com
++.tanx.com
+adashbc.ut.taobao.com
+adashxgc.ut.taobao.com
+baichuan-sdk.alicdn.com
+userlink.alicdn.com
+dg.k.jd.com
+dgstatic.jd.com
++.umeng.com
++.iadsdk.apple.com
++.shuzilm.cn
+global-iuni.checktrustworthiness.com
++.laichon.com
++.yidianlingyi.cn
+business-ad.cdn-go.cn
+
+# 监控 & 错误追踪
++.ingest.sentry.io
+browser-intake-datadoghq.com
+
+# ping0 绕过代理搜集用户真实IP信息,用途不明,直接屏蔽
++.ping0.cc
