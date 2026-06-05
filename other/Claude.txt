@@ -21,3 +21,7 @@
 +.intercom.io
 +.intercomcdn.com
 +.statsig.com
+# 补充：Claude 人机验证依赖的第三方安全服务（若发现其他网站验证异常，可考虑移除该行并改为精确抓包后添加）
++.challenges.cloudflare.com
+# 补充备用：Claude 人机验证
++.hcaptcha.com
