@@ -28,12 +28,8 @@
 +.claudeusercontent.com
 +.claude.com
 +.claude.run
-#  Claude 平台功能、开发文档与 CDN 静态资源
+#  Claude 平台功能、开发文档与 CDN 静态资源（第三方集成服务）
 +.servd-anthropic-website.b-cdn.net
-#  Intercom 客户支持与数据统计（第三方集成服务）
-+.intercom.io
-+.intercomcdn.com
-+.statsig.com
 
 # ══════════════════════════════════════════════════════════════════════
 # 3. Google Gemini 与生成式 AI 边缘端（精准剥离，不影响全域 Google 直连或普通代理）
