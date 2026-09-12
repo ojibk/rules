@@ -1,0 +1,82 @@
+# NAME: social-ip-attribution
+# 名称: 国内社交平台 IP 属地归因与 HTTPDNS 防绕过精细化规则集 (整合版)
+# DESCRIPTION: Domestic Social Media social-IP-Attribution Domain Rule-Set Grouped by Vendor (ByteDance, Sina, Tencent, Baidu, Bilibili, Xiaohongshu, Zhihu, Kuaishou, Douban...)
+# 描述：国内主流社交平台跨端（APP/PC网页版）IP 属地上报与 API 归因接口精细化分流规则集
+# TOTAL_ITEMS: 40
+# format: text / mrs
+# 若需本地转成 mrs 格式，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
+# cd "D:\Program Files\Clash Verge"
+# Windows: .\verge-mihomo convert-ruleset domain text social-ip-attribution.yaml social-ip-attribution.mrs
+# Linux/macOS: ./verge-mihomo convert-ruleset domain text social-ip-attribution.yaml social-ip-attribution.mrs
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. 核心 HTTPDNS 防绕过 (逼退至系统 DNS 以确保 Fake-IP 接管)
+# ══════════════════════════════════════════════════════════════════════
++.dns.weixin.qq.com
++.httpdns.tencent.com
++.httpdns.c.cdnhwc2.com
++.httpdns.bilivideo.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. 微信 / 腾讯 (仅保留归因与长连接 API，完全排除 qq.com 根域)
+# ══════════════════════════════════════════════════════════════════════
++.mp.weixin.qq.com
++.szshort.weixin.qq.com
++.szextshort.weixin.qq.com
++.szminorshort.weixin.qq.com
++.qun.qq.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. 字节跳动 / 抖音 / 头条 (仅保留 API，剔除 pstatp CDN 与 douyin.com 根域)
+# ══════════════════════════════════════════════════════════════════════
++.iesdouyin.com
++.amemv.com
++.snssdk.com
++.toutiaoapi.com
++.toutiaocloud.com
++.zijieapi.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. 新浪微博 (仅保留移动端/API 域，剔除 sinaimg 图床与 weibocdn)
+# ══════════════════════════════════════════════════════════════════════
++.weibo.cn
++.weibo.com
++.sina.cn
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. 百度贴吧 (仅保留贴吧互动与风控 API，剔除 tiebacdn 与 tiebaimg)
+# ══════════════════════════════════════════════════════════════════════
++.tbapi.baidu.com
++.c.tieba.baidu.com
++.tbmsg.baidu.com
++.tiebac.baidu.com
++.tb.himg.baidu.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. 哔哩哔哩 (仅保留核心 API，彻底剥离 hdslb 图床与 bilivideo 视频 CDN)
+# ══════════════════════════════════════════════════════════════════════
++.biliapi.net
++.biliapi.com
++.bilibili.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. 小红书 / 知乎 / 快手 / 豆瓣 (彻底剥离 zhimg / yximgs / doubanio CDN)
+# ══════════════════════════════════════════════════════════════════════
++.xiaohongshu.com
++.xhslink.com
++.zhihu.com
++.ksapisrv.com
++.gifshow.com
++.douban.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 8. 大众社区精细化接口 (NGA / 虎扑 / 酷安 / TapTap / 即刻)
+# ══════════════════════════════════════════════════════════════════════
++.ngabbs.com
++.nga.178.com
+bbs.mobileapi.hupu.com
+api.coolapk.com
+api2.coolapk.com
+api.taptapdada.com
++.okjike.com
++.jike.ruguoapp.com
