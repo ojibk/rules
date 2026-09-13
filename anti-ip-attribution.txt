@@ -1,0 +1,121 @@
+# NAME: anti-ip-attribution
+# 名称：国内社交 App/网页版 IP 属地防归因全量规则集
+# DESCRIPTION: Domestic Social Media Anti-IP-Attribution Domain Rule-Set Grouped by Vendor (ByteDance, Sina, Tencent, Baidu, Bilibili, Xiaohongshu, Zhihu, Kuaishou, Douban...)
+# 描述：国内主流社交平台跨端（APP/PC网页版）IP 属地上报与 API 归因接口精细化分流规则集
+# TOTAL_ITEMS: 68
+# format: text / mrs
+# 若需本地转成 mrs 格式，可将此文件置于 mihomo 内核目录下，在终端中执行转换命令：
+# cd "D:\Program Files\Clash Verge"
+# Windows: .\verge-mihomo convert-ruleset domain text anti-ip-attribution.txt anti-ip-attribution.mrs
+# Linux/macOS: ./verge-mihomo convert-ruleset domain text anti-ip-attribution.txt anti-ip-attribution.mrs
+# ══════════════════════════════════════════════════════════════════════
+# 0. 核心 HTTPDNS 域名（优先归集，防止 APP 绕过）
+# ══════════════════════════════════════════════════════════════════════
++.httpdns.c.cdnhwc2.com
++.dns.weixin.qq.com
++.httpdns.tencent.com
++.httpdns.bilivideo.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 1. 字节跳动 (ByteDance) - 抖音、头条、西瓜视频、掘金及埋点/HTTPDNS
+# ══════════════════════════════════════════════════════════════════════
++.douyin.com
++.iesdouyin.com
++.amemv.com
++.snssdk.com
++.toutiao.com
++.toutiaocloud.com
++.ixigua.com
++.pstatp.com
++.bytedance.com
++.juejin.cn
++.byteoversea.com
++.bytegoofy.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 2. 新浪 (Sina) - 微博 PC/APP 生态及 IP 校验 API
+# ══════════════════════════════════════════════════════════════════════
++.weibo.cn
++.weibo.com
++.weibocdn.com
++.sinaimg.cn
++.sina.cn
++.sina.com.cn
+
+# ══════════════════════════════════════════════════════════════════════
+# 3. 腾讯 (Tencent) - 微信朋友圈/公众号/视频号、QQ生态及 HTTPDNS
+# ══════════════════════════════════════════════════════════════════════
++.mp.weixin.qq.com
++.szextshort.weixin.qq.com
++.szshort.weixin.qq.com
++.qq.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 4. 百度 (Baidu) - 百度贴吧全域 API、网页端 IP 属地及风控接口
+# ══════════════════════════════════════════════════════════════════════
++.tieba.baidu.com
++.tbapi.baidu.com
++.c.tieba.baidu.com
++.tb.himg.baidu.com
++.tieba.com
++.tiebacdn.com
++.tiebaimg.com
++.banti.baidu.com
++.gsp0.baidu.com
++.gsp1.baidu.com
++.gsp2.baidu.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 5. 哔哩哔哩 (Bilibili) - 哔哩哔哩 API、CDN 及 HTTPDNS
+# ══════════════════════════════════════════════════════════════════════
++.bilibili.com
++.biliapi.net
++.biliapi.com
++.bilivideo.com
++.hdslb.com
++.bilibili.co
++.bilibili.tv
+
+# ══════════════════════════════════════════════════════════════════════
+# 6. 行吟信息 (Xiaohongshu) - 小红书社区 PC/APP 及 API 接口
+# ══════════════════════════════════════════════════════════════════════
++.xiaohongshu.com
++.xhslink.com
++.xiaohongshu.net
+
+# ══════════════════════════════════════════════════════════════════════
+# 7. 智者四海 (Zhihu) - 知乎 API 及静态资源
+# ══════════════════════════════════════════════════════════════════════
++.zhihu.com
++.zhimg.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 8. 快手 (Kuaishou) - 快手 APP/网页端、gifshow 核心域名及 API 接口
+# ══════════════════════════════════════════════════════════════════════
++.kuaishou.com
++.yximgs.com
++.ksapisrv.com
++.gifshow.com
++.kwai.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 9. 豆网 (Douban) - 豆瓣社区及 API 接口
+# ══════════════════════════════════════════════════════════════════════
++.douban.com
++.doubanio.com
+
+# ══════════════════════════════════════════════════════════════════════
+# 10. 垂直社区与新闻跟帖平台 (Hupu, NGA, CSDN, Jike, NetEase, Sohu, IFeng)
+# ══════════════════════════════════════════════════════════════════════
++.hupu.com
++.hupucdn.com
++.nga.cn
++.ngabbs.com
++.csdn.net
++.csdnimg.cn
++.okjike.com
++.jike.ruguoapp.com
++.163.com
++.126.net
++.sohu.com
++.ifeng.com
