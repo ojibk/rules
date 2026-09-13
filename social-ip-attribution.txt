@@ -1,5 +1,5 @@
 # NAME: social-ip-attribution
-# 名称: 国内社交平台 IP 属地归因与 HTTPDNS 防绕过精细化规则集 (整合版)
+# 名称: 国内社交平台 IP 属地归因与 HTTPDNS 防绕过精细化规则集
 # DESCRIPTION: Domestic Social Media social-IP-Attribution Domain Rule-Set Grouped by Vendor (ByteDance, Sina, Tencent, Baidu, Bilibili, Xiaohongshu, Zhihu, Kuaishou, Douban...)
 # 描述：国内主流社交平台跨端（APP/PC网页版）IP 属地上报与 API 归因接口精细化分流规则集
 
@@ -16,7 +16,7 @@
 # Linux/macOS: ./verge-mihomo convert-ruleset domain text social-ip-attribution.txt social-ip-attribution.mrs
 
 # ══════════════════════════════════════════════════════════════════════
-# 1. 平台独立解析与 HTTPDNS 端点 (使解析请求本身经由归因出口，尽量保持解析链路与业务出口一致；也可另行扩展规则集执行阻断，逼退至系统 DNS 以确保 Fake-IP 接管)
+# 0. 平台独立解析与 HTTPDNS 端点 (使解析请求本身经由归因出口，尽量保持解析链路与业务出口一致；也可另行扩展规则集执行阻断，逼退至系统 DNS 以确保 Fake-IP 接管)
 # ══════════════════════════════════════════════════════════════════════
 +.dns.weixin.qq.com
 +.httpdns.tencent.com
@@ -24,36 +24,33 @@
 +.httpdns.bilivideo.com
 
 # ══════════════════════════════════════════════════════════════════════
-# 2. 微信 (IP 归因相关依据的业务/API 域)
-# ══════════════════════════════════════════════════════════════════════
-+.mp.weixin.qq.com
-+.szshort.weixin.qq.com
-+.szextshort.weixin.qq.com
-+.szminorshort.weixin.qq.com
-
-# ══════════════════════════════════════════════════════════════════════
-# 3. 字节跳动 / 抖音 / 头条 (归因相关 API / 业务域)
+# 1. 字节跳动 / 抖音 / 今日头条 (补齐核心 API，剥离视频 CDN)
 # ══════════════════════════════════════════════════════════════════════
 +.toutiaoapi.com
 +.zijieapi.com
++.iesdouyin.com
++.snssdk.com
+aweme.amemv.com
 
 # ══════════════════════════════════════════════════════════════════════
-# 4. 新浪微博 (仅保留精确匹配的 API 主机，排除主站与 CDN)
+# 2. 新浪微博
 # ══════════════════════════════════════════════════════════════════════
-api.weibo.cn
-api.weibo.com
++.api.weibo.cn
++.api.weibo.com
 
 # ══════════════════════════════════════════════════════════════════════
-# 5. 百度贴吧 (IP 归因相关依据的核心业务域)
+# 3. 百度贴吧 (含验证码与版提风控域，防双 IP 脑裂)
 # ══════════════════════════════════════════════════════════════════════
 +.tieba.baidu.com
 +.tbapi.baidu.com
 +.c.tieba.baidu.com
 +.tbmsg.baidu.com
 +.tiebac.baidu.com
++.banti.baidu.com
++.seccaptcha.baidu.com
 
 # ══════════════════════════════════════════════════════════════════════
-# 6. 哔哩哔哩 (API / 业务接口域，剥离 hdslb 图床与 bilivideo CDN)
+# 4. 哔哩哔哩 (剥离 hdslb 图床与 bilivideo CDN)
 # ══════════════════════════════════════════════════════════════════════
 +.biliapi.net
 +.biliapi.com
@@ -68,18 +65,18 @@ message.bilibili.com
 cm.bilibili.com
 
 # ══════════════════════════════════════════════════════════════════════
-# 7. 小红书 / 知乎 / 快手 / 豆瓣 (彻底剥离 zhimg / yximgs / doubanio CDN)
+# 5. 小红书 / 知乎 / 快手 / 豆瓣 (收敛知乎根域，防范静态资源污染)
 # ══════════════════════════════════════════════════════════════════════
 +.edith.xiaohongshu.com
 +.xhslink.com
-+.zhihu.com
+api.zhihu.com
 +.ksapisrv.com
 +.gifshow.com
 +.kuaishouzt.com
 +.api.douban.com
 
 # ══════════════════════════════════════════════════════════════════════
-# 8. 垂直社区精细化接口 (NGA / 虎扑 / 酷安 / TapTap / 即刻)
+# 6. 垂直社区精细化接口 (高危精确匹配，低危泛域名兜底)
 # ══════════════════════════════════════════════════════════════════════
 +.ngabbs.com
 +.nga.178.com
